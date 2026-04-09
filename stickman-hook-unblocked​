@@ -15,6 +15,27 @@
             padding: 20px;
             background-color: #f4f7f6;
         }
+        
+        /* Navigation Bar Styles */
+        nav {
+            background-color: #2c3e50;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: left;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #3498db;
+        }
+
         h1, h2, h3 {
             color: #2c3e50;
         }
@@ -23,6 +44,7 @@
             text-align: center;
             border-bottom: 3px solid #3498db;
             padding-bottom: 10px;
+            margin-top: 0;
         }
         .game-placeholder {
             background-color: #2c3e50;
@@ -86,6 +108,10 @@
     </script>
 </head>
 <body>
+
+    <nav>
+        <a href="https://unblocked-steal-a-brainrot.github.io/">🏠 Back to All Unblocked Games</a>
+    </nav>
 
     <header>
         <h1>Stickman Hook Unblocked</h1>
@@ -152,21 +178,4 @@
         <ul>
             <li><strong>Vex 4 Unblocked:</strong> For fans of stickman parkour and intense obstacles.</li>
             <li><strong>Moto X3M:</strong> High-speed physics fun on a dirt bike.</li>
-            <li><strong>Slope:</strong> The ultimate test of your reflexes and speed.</li>
-        </ul>
-    </section>
-
-    <section class="faq-section">
-        <h2>Frequently Asked Questions (FAQ)</h2>
-        <h3>Can I play Stickman Hook Unblocked at school?</h3>
-        <p>Yes! By using sites like <strong>Unblocked 66</strong> or <strong>Classroom 6x</strong>, you can typically bypass network restrictions and play directly in your browser.</p>
-
-        <h3>Why is my game lagging?</h3>
-        <p>If you experience lag, try switching to a <strong>No Lag</strong> version or closing other browser tabs. Stickman Hook is lightweight and should run smoothly on most Chromebooks.</p>
-
-        <h3>How do I unlock new skins?</h3>
-        <p>As you complete levels and reach specific milestones, you’ll unlock a variety of funny and cool skins to change your stickman’s appearance—from superheroes to animals!</p>
-    </section>
-
-</body>
-</html>
+            <li><strong>Slope:</strong> The ultimate test of your reflexes and speed
