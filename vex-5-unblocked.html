@@ -60,8 +60,20 @@
 
         .seo-text { max-width: 800px; margin: 0 auto; color: #cbd5e1; line-height: 1.6; font-size: 1.1rem; }
         
-        .game-frame { width: 100%; max-width: 900px; margin: 0 auto; border: 2px solid #334155; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.5); background-color: #000; }
-        .game-cover-image { width: 100%; height: auto; display: block; object-fit: cover; aspect-ratio: 16/9; }
+        /* تحسين صندوق اللعبة للـ iframe */
+        .game-container { 
+            position: relative; 
+            width: 100%; 
+            max-width: 900px; 
+            margin: 0 auto; 
+            aspect-ratio: 16/9; 
+            border: 2px solid #334155; 
+            border-radius: 12px; 
+            overflow: hidden; 
+            background-color: #000;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+        .game-frame { width: 100%; height: 100%; border: none; }
         
         .seo-article { text-align: left; max-width: 900px; margin: 40px auto; padding: 25px; background: var(--card-bg); border-radius: 12px; color: #94a3b8; font-size: 0.95rem; line-height: 1.7; border: 1px solid #334155; }
         .seo-article h2 { color: var(--primary); font-size: 1.5rem; margin-top: 30px; border-bottom: 1px solid #334155; padding-bottom: 5px; }
@@ -83,7 +95,6 @@
         @media (max-width: 600px) {
             h1 { font-size: 1.8rem; }
             .grid { grid-template-columns: 1fr; }
-            .game-frame { border-radius: 8px; }
             nav a, footer a { display: block; margin: 8px 0; }
             .seo-article { padding: 15px; }
         }
@@ -106,14 +117,13 @@
     <p class="seo-text">Master the ultimate stickman parkour challenge! Play Vex 5 Unblocked for free and conquer every trap on Classroom 6x and Unblocked 76.</p>
 </header>
 
-<div class="game-frame">
-    <img src="https://unblocked-steal-a-brainrot.github.io/assets/images/vex-5-unblocked.jpg"
-         alt="Vex 5 Unblocked Online - Free Unblocked Game"
-         title="Click to Play Vex 5 Unblocked 100% Working"
-         fetchpriority="high"
-         width="800"
-         height="450"
-         class="game-cover-image">
+<div class="game-container">
+    <iframe 
+        src="https://unblocked-steal-a-brainrot.github.io/vex5/" 
+        class="game-frame" 
+        scrolling="no" 
+        allowfullscreen>
+    </iframe>
 </div>
 
 <div class="seo-article">
@@ -155,7 +165,7 @@
     <a href="steal-a-brainrot-unblocked.html" class="game-card"><h3>🎮 Steal a Brainrot Unblocked</h3></a>
     <a href="dreadhead-parkour-unblocked.html" class="game-card"><h3>🎮 Dreadhead Parkour Unblocked</h3></a>
     <a href="raft-wars-unblocked.html" class="game-card"><h3>🎮 Raft Wars Unblocked</h3></a>
-    <a href="stickman-hook-unblocked%E2%80%8B.html" class="game-card"><h3>🎮 Stickman Hook Unblocked</h3></a>
+    <a href="stickman-hook-unblocked.html" class="game-card"><h3>🎮 Stickman Hook Unblocked</h3></a>
     <a href="skibidi-toilet-unblocked.html" class="game-card"><h3>🎮 Skibidi Toilet Unblocked</h3></a>
 </div>
 
