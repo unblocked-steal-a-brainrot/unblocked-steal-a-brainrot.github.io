@@ -55,13 +55,24 @@
 
         .seo-text { max-width: 800px; margin: 0 auto; color: #cbd5e1; line-height: 1.6; font-size: 1.1rem; }
         
-        .game-frame { width: 100%; max-width: 900px; margin: 0 auto; border: 2px solid #334155; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.5); background-color: #000; }
-        .game-cover-image { width: 100%; height: auto; display: block; object-fit: cover; aspect-ratio: 16/9; }
+        /* Game Frame Styling */
+        .game-container { 
+            position: relative; 
+            width: 100%; 
+            max-width: 900px; 
+            margin: 0 auto; 
+            aspect-ratio: 16/9; 
+            border: 2px solid #334155; 
+            border-radius: 12px; 
+            overflow: hidden; 
+            background-color: #000;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+        .game-frame { width: 100%; height: 100%; border: none; }
         
         .seo-article { text-align: left; max-width: 900px; margin: 40px auto; padding: 25px; background: var(--card-bg); border-radius: 12px; color: #94a3b8; font-size: 0.95rem; line-height: 1.7; border: 1px solid #334155; }
         .seo-article h2 { color: var(--primary); font-size: 1.5rem; margin-top: 30px; border-bottom: 1px solid #334155; padding-bottom: 5px; }
         .seo-article h3 { color: #e2e8f0; font-size: 1.2rem; margin-top: 20px; }
-        .seo-article strong { color: #e2e8f0; }
         .seo-article ul, .seo-article ol { padding-left: 20px; margin-bottom: 20px; }
         .seo-article li { margin-bottom: 8px; }
         
@@ -71,15 +82,12 @@
         .game-card h3 { margin: 0; font-size: 1.1rem; color: var(--text); }
         
         footer { margin-top: 50px; padding: 30px 20px; border-top: 1px solid #334155; font-size: 0.9rem; color: #94a3b8; background-color: var(--card-bg); border-radius: 12px 12px 0 0; }
-        footer .legal-links { margin-top: 15px; }
-        footer a { color: var(--primary); text-decoration: none; margin: 0 12px; display: inline-block; padding: 5px; }
-        footer a:hover { text-decoration: underline; color: #fff; }
+        footer a { color: var(--primary); text-decoration: none; margin: 0 12px; }
         
         @media (max-width: 600px) {
             h1 { font-size: 1.8rem; }
             .grid { grid-template-columns: 1fr; }
-            .game-frame { border-radius: 8px; }
-            nav a, footer a { display: block; margin: 8px 0; }
+            nav a { display: block; margin: 10px 0; }
             .seo-article { padding: 15px; }
         }
     </style>
@@ -101,14 +109,13 @@
     <p class="seo-text">Join the viral heist of 2026! Play Steal a Brainrot Unblocked for free. Grab the rarest memes and build your empire with zero lag.</p>
 </header>
 
-<div class="game-frame">
-    <img src="https://unblocked-steal-a-brainrot.github.io/assets/images/steal%20a%20brainrot%20unblocked%E2%80%8B.jpg"
-         alt="Steal a Brainrot Unblocked Online - Free Unblocked Game"
-         title="Click to Play Steal a Brainrot Unblocked 100% Working"
-         fetchpriority="high"
-         width="800"
-         height="450"
-         class="game-cover-image">
+<div class="game-container">
+    <iframe 
+        src="https://st.8games.net/9/8g/igra-ukradi-brejnrot-original-3d/" 
+        class="game-frame" 
+        scrolling="no" 
+        allowfullscreen>
+    </iframe>
 </div>
 
 <div class="seo-article">
@@ -129,23 +136,13 @@
         <li><strong>Starting Out:</strong> Head to the red conveyor belt to buy your first common brainrot.</li>
         <li><strong>The Heist:</strong> Sneak into an enemy base, grab a character, and haul it back.</li>
         <li><strong>Defense:</strong> Use your baseball bat to whack raiders and protect your loot!</li>
-        <li><strong>Rebirth:</strong> Reset your progress for permanent stat boosts and new rarities.</li>
     </ol>
-
-    <h2>Where to Play: Top Unblocked Mirrors</h2>
-    <p>Depending on your device, you can access the game via <strong>Unblocked Games 66</strong>, <strong>Classroom 6x</strong>, or <strong>GitHub mirrors</strong>. These portals are designed to stay under the radar of network administrators, providing 100% working links.</p>
-
-    <h2>Frequently Asked Questions (FAQ)</h2>
-    <h3>How do I play at school?</h3>
-    <p>Use trusted sites like Games 66 or search for "steal a brainrot unblocked GitHub" for the most reliable access.</p>
-    <h3>Is there a Steal a Brainrot 2 unblocked?</h3>
-    <p>Yes! The latest 2026 updates introduced the <strong>Steal a Brainrot 2</strong> expansion with extra floors and "God" rarities.</p>
 </div>
 
 <h2 style="color: var(--primary); margin-bottom: 10px;">Explore More Games</h2>
 <div class="grid">
     <a href="dreadhead-parkour-unblocked.html" class="game-card"><h3>🎮 Dreadhead Parkour Unblocked</h3></a>
-    <a href="stickman-hook-unblocked%E2%80%8B.html" class="game-card"><h3>🎮 Stickman Hook Unblocked</h3></a>
+    <a href="stickman-hook-unblocked.html" class="game-card"><h3>🎮 Stickman Hook Unblocked</h3></a>
     <a href="raft-wars-unblocked.html" class="game-card"><h3>🎮 Raft Wars Unblocked</h3></a>
     <a href="vex-5-unblocked.html" class="game-card"><h3>🎮 Vex 5 Unblocked</h3></a>
     <a href="skibidi-toilet-unblocked.html" class="game-card"><h3>🎮 Skibidi Toilet Unblocked</h3></a>
@@ -154,10 +151,8 @@
 <footer>
     <p>&copy; 2026 Steal a Brainrot Unblocked. All rights reserved.</p>
     <div class="legal-links">
-        <a href="https://unblocked-steal-a-brainrot.github.io/index.html">Home</a> | 
         <a href="https://unblocked-steal-a-brainrot.github.io/privacy-policy.html">Privacy Policy</a> | 
         <a href="https://unblocked-steal-a-brainrot.github.io/terms-of-service.html">Terms of Service</a> | 
-        <a href="https://unblocked-steal-a-brainrot.github.io/dmca.html">DMCA</a> | 
         <a href="https://unblocked-steal-a-brainrot.github.io/contact.html">Contact Us</a>
     </div>
 </footer>
