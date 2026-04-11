@@ -60,9 +60,38 @@
 
         .seo-text { max-width: 800px; margin: 0 auto; color: #cbd5e1; line-height: 1.6; font-size: 1.1rem; }
         
-        .game-frame { width: 100%; max-width: 900px; margin: 0 auto; border: 2px solid #334155; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.5); background-color: #000; }
-        .game-cover-image { width: 100%; height: auto; display: block; object-fit: cover; aspect-ratio: 16/9; }
-        
+        /* Optimized Game Container */
+        .game-wrapper { max-width: 1000px; margin: 0 auto; width: 100%; }
+        .game-container { 
+            position: relative; 
+            width: 100%; 
+            aspect-ratio: 16 / 9; 
+            border: 3px solid #334155; 
+            border-radius: 12px; 
+            overflow: hidden; 
+            background-color: #000;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+        .game-iframe { width: 100%; height: 100%; border: none; }
+
+        /* Fullscreen Button Style */
+        .fullscreen-btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: transform 0.2s, background-color 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .fullscreen-btn:hover { background-color: #059669; transform: scale(1.05); }
+
         .seo-article { text-align: left; max-width: 900px; margin: 40px auto; padding: 25px; background: var(--card-bg); border-radius: 12px; color: #94a3b8; font-size: 0.95rem; line-height: 1.7; border: 1px solid #334155; }
         .seo-article h2 { color: var(--primary); font-size: 1.5rem; margin-top: 30px; border-bottom: 1px solid #334155; padding-bottom: 5px; }
         .seo-article h3 { color: #e2e8f0; font-size: 1.2rem; margin-top: 20px; }
@@ -81,7 +110,7 @@
         @media (max-width: 600px) {
             h1 { font-size: 1.8rem; }
             .grid { grid-template-columns: 1fr; }
-            .game-frame { border-radius: 8px; }
+            .game-container { aspect-ratio: 4 / 3; }
             nav a, footer a { display: block; margin: 8px 0; }
             .seo-article { padding: 15px; }
         }
@@ -104,21 +133,27 @@
     <p class="seo-text">Dive into the brainrot! Play Skibidi Toilet unblocked games for free at school. Bypass network filters easily with 100% working links.</p>
 </header>
 
-<div class="game-frame">
-    <img src="https://unblocked-steal-a-brainrot.github.io/assets/images/skibidi-toilet-unblocked.jpg" 
-         alt="Skibidi Toilet Unblocked Online - Free Unblocked Game" 
-         title="Click to Play Skibidi Toilet Unblocked Unblocked 100% Working" 
-         fetchpriority="high"
-         width="800" 
-         height="450" 
-         class="game-cover-image">
+<div class="game-wrapper">
+    <div class="game-container">
+        <iframe 
+            class="game-iframe" 
+            id="game-area" 
+            src="https://wordleunlimitedgame.org/play/skibiditoiletattack/" 
+            scrolling="no" 
+            frameborder="0" 
+            allowfullscreen>
+        </iframe>
+    </div>
+    <button class="fullscreen-btn" onclick="openFullscreen();">
+        📺 Play Full Screen
+    </button>
 </div>
 
 <div class="seo-article">
     <h2>About Skibidi Toilet Unblocked</h2>
-    <p>Are you looking for the best way to play <strong>Skibidi Toilet Unblocked</strong>? Our platform offers the ultimate seamless experience for gamers who want to enjoy their favorite meme titles without interruptions. Unlike other websites, we ensure that this game is fully optimized, 100% working, and entirely safe to play whether you are at home, school, or the workplace. There are no downloads required, no annoying pop-ups, and absolutely no proxy setup needed. Simply click and dive straight into the action!</p>
+    <p>Are you looking for the best way to play <strong>Skibidi Toilet Unblocked</strong>? Our platform offers the ultimate seamless experience for gamers who want to enjoy their favorite meme titles without interruptions. Unlike other websites, we ensure that this game is fully optimized, 100% working, and entirely safe to play whether you are at home, school, or the workplace. Simply click and dive straight into the action!</p>
     
-    <p>We understand how frustrating it can be to encounter blocked gaming websites on strict networks. That is exactly why our dedicated unblocked games library is constantly updated to bypass all network filters securely. Experience smooth, zero-lag HTML5 gameplay today. Don't forget to bookmark us, share the fun with your friends, and explore our massive collection of similar brainrot and classic arcade games available right below.</p>
+    <p>We understand how frustrating it can be to encounter blocked gaming websites on strict networks. That is exactly why our dedicated unblocked games library is constantly updated to bypass all network filters securely. Experience smooth, zero-lag HTML5 gameplay today.</p>
 
     <h3>Why Play on Our Site?</h3>
     <ul>
@@ -131,11 +166,24 @@
 <h2 style="color: var(--primary); margin-bottom: 10px;">Explore More Games</h2>
 <div class="grid">
     <a href="steal-a-brainrot-unblocked.html" class="game-card"><h3>🎮 Steal a Brainrot Unblocked</h3></a>
-    <a href="stickman-hook-unblocked%E2%80%8B.html" class="game-card"><h3>🎮 Stickman Hook Unblocked</h3></a>
+    <a href="stickman-hook-unblocked.html" class="game-card"><h3>🎮 Stickman Hook Unblocked</h3></a>
     <a href="dreadhead-parkour-unblocked.html" class="game-card"><h3>🎮 Dreadhead Parkour Unblocked</h3></a>
     <a href="raft-wars-unblocked.html" class="game-card"><h3>🎮 Raft Wars Unblocked</h3></a>
     <a href="vex-5-unblocked.html" class="game-card"><h3>🎮 Vex 5 Unblocked</h3></a>
 </div>
+
+<script>
+    function openFullscreen() {
+        var elem = document.getElementById("game-area");
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) { /* Safari */
+            elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) { /* IE11 */
+            elem.msRequestFullscreen();
+        }
+    }
+</script>
 
 <footer>
     <p>&copy; 2026 Steal a Brainrot Unblocked. All rights reserved.</p>
