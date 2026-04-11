@@ -18,12 +18,12 @@
         nav a { color: var(--text); text-decoration: none; margin: 0 15px; font-weight: 500; transition: color 0.3s; }
         nav a:hover { color: var(--primary); }
         
-        header { padding: 20px 0 10px 0; }
+        header { padding: 10px 0; }
         h1 { color: var(--primary); font-size: 2.5rem; margin-top: 0; margin-bottom: 10px; }
         
-        /* Game Container Optimization */
+        /* Desktop Optimized Game Container */
         .game-wrapper {
-            max-width: 900px;
+            max-width: 1000px; /* Increased for Desktop */
             margin: 0 auto;
             width: 100%;
         }
@@ -31,13 +31,13 @@
         .game-container { 
             position: relative; 
             width: 100%; 
-            /* التناسب الطولي للعبة الباركور */
-            aspect-ratio: 480 / 750; 
+            /* 16:9 Aspect Ratio for Desktop perfection */
+            aspect-ratio: 16 / 9; 
             border: 3px solid #334155; 
             border-radius: 12px; 
             overflow: hidden; 
             background-color: #000;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
         }
 
         .game-iframe { width: 100%; height: 100%; border: none; }
@@ -47,23 +47,25 @@
             background-color: var(--primary);
             color: white;
             border: none;
-            padding: 12px 24px;
-            font-size: 1rem;
+            padding: 14px 28px;
+            font-size: 1.1rem;
             font-weight: bold;
             border-radius: 8px;
             cursor: pointer;
-            margin-top: 15px;
+            margin-top: 20px;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            transition: transform 0.2s, background-color 0.2s;
+            gap: 10px;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
         }
         .fullscreen-btn:hover {
             background-color: #059669;
             transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(16, 185, 129, 0.3);
         }
 
-        .seo-article { text-align: left; max-width: 900px; margin: 40px auto; padding: 25px; background: var(--card-bg); border-radius: 12px; color: #94a3b8; font-size: 0.95rem; line-height: 1.7; border: 1px solid #334155; }
+        .seo-article { text-align: left; max-width: 1000px; margin: 40px auto; padding: 25px; background: var(--card-bg); border-radius: 12px; color: #94a3b8; font-size: 0.95rem; line-height: 1.7; border: 1px solid #334155; }
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; max-width: 1200px; margin: 20px auto 40px auto; flex: 1; }
         .game-card { background: var(--card-bg); border-radius: 12px; padding: 15px; transition: transform 0.3s; text-decoration: none; color: inherit; border: 1px solid #334155; display: block; }
         .game-card:hover { transform: translateY(-5px); border-color: var(--primary); }
@@ -71,11 +73,12 @@
         footer { margin-top: 50px; padding: 30px 20px; border-top: 1px solid #334155; font-size: 0.9rem; color: #94a3b8; background-color: var(--card-bg); border-radius: 12px 12px 0 0; }
         footer a { color: var(--primary); text-decoration: none; margin: 0 12px; }
         
-        @media (max-width: 600px) {
+        /* Mobile adjustment to keep it playable on small screens */
+        @media (max-width: 768px) {
             h1 { font-size: 1.8rem; }
             .grid { grid-template-columns: 1fr; }
             nav a { display: block; margin: 10px 0; }
-            .game-container { aspect-ratio: 480 / 800; }
+            .game-container { aspect-ratio: 4 / 3; } /* Slightly taller for mobile */
         }
     </style>
 </head>
@@ -96,20 +99,26 @@
             class="game-iframe" 
             id="game-area" 
             src="https://dreadheadparkour.gitlab.io/file/" 
-            scrolling="none" 
+            scrolling="no" 
             frameborder="0" 
-            allowfullscreen="">
+            allowfullscreen="true"
+            webkitallowfullscreen="true"
+            mozallowfullscreen="true"
+            msallowfullscreen="true">
         </iframe>
     </div>
 
-    <button class="fullscreen-btn" onclick="openFullscreen();">
-        📺 Play Full Screen
+    <button class="fullscreen-btn" onclick="toggleFullScreen();">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0.5a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/>
+        </svg>
+        PLAY IN FULL SCREEN
     </button>
 </div>
 
 <div class="seo-article">
-    <h2>Dreadhead Parkour Full Screen Mode</h2>
-    <p>Get the best experience by playing <strong>Dreadhead Parkour Unblocked</strong> in full screen. This mode allows you to focus on your flips and timing without distractions, making it easier to escape the difficult levels and dodge deadly obstacles.</p>
+    <h2>Play Dreadhead Parkour in HD Desktop Mode</h2>
+    <p>Experience <strong>Dreadhead Parkour Unblocked</strong> with an optimized desktop layout. By utilizing the 16:9 aspect ratio, you can see more of the upcoming obstacles, saws, and spikes, giving you a competitive edge. Use our <strong>Full Screen</strong> feature to immerse yourself in the high-speed parkour action and reach the finish line like a pro.</p>
 </div>
 
 <h2 style="color: var(--primary); margin-bottom: 10px;">Explore More Games</h2>
@@ -121,15 +130,17 @@
 </div>
 
 <script>
-    var elem = document.getElementById("game-holder");
-    function openFullscreen() {
-      if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-      } else if (elem.webkitRequestFullscreen) { /* Safari */
-        elem.webkitRequestFullscreen();
-      } else if (elem.msRequestFullscreen) { /* IE11 */
-        elem.msRequestFullscreen();
-      }
+    function toggleFullScreen() {
+        var elem = document.getElementById("game-area");
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) { /* Firefox */
+            elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+            elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) { /* IE/Edge */
+            elem.msRequestFullscreen();
+        }
     }
 </script>
 
