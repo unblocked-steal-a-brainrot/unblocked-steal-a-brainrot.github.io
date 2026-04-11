@@ -60,8 +60,37 @@
 
         .seo-text { max-width: 800px; margin: 0 auto; color: #cbd5e1; line-height: 1.6; font-size: 1.1rem; }
         
-        .game-frame { width: 100%; max-width: 900px; margin: 0 auto; border: 2px solid #334155; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.5); background-color: #000; }
-        .game-cover-image { width: 100%; height: auto; display: block; object-fit: cover; aspect-ratio: 16/9; }
+        /* Game Frame Container Optimized for 16:9 */
+        .game-wrapper { max-width: 1000px; margin: 0 auto; width: 100%; }
+        .game-container { 
+            position: relative; 
+            width: 100%; 
+            aspect-ratio: 16 / 9; 
+            border: 3px solid #334155; 
+            border-radius: 12px; 
+            overflow: hidden; 
+            background-color: #000;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+        .game-iframe { width: 100%; height: 100%; border: none; }
+
+        /* Fullscreen Button */
+        .fullscreen-btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: transform 0.2s, background-color 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .fullscreen-btn:hover { background-color: #059669; transform: scale(1.05); }
         
         .seo-article { text-align: left; max-width: 900px; margin: 40px auto; padding: 25px; background: var(--card-bg); border-radius: 12px; color: #94a3b8; font-size: 0.95rem; line-height: 1.7; border: 1px solid #334155; }
         .seo-article h2 { color: var(--primary); font-size: 1.5rem; margin-top: 30px; border-bottom: 1px solid #334155; padding-bottom: 5px; }
@@ -83,7 +112,6 @@
         @media (max-width: 600px) {
             h1 { font-size: 1.8rem; }
             .grid { grid-template-columns: 1fr; }
-            .game-frame { border-radius: 8px; }
             nav a, footer a { display: block; margin: 8px 0; }
             .seo-article { padding: 15px; }
         }
@@ -106,29 +134,25 @@
     <p class="seo-text">Ready to hit the high seas and protect your hard-earned gold? Play Raft Wars Unblocked for free!</p>
 </header>
 
-<div class="game-frame">
-    <img src="https://unblocked-steal-a-brainrot.github.io/assets/images/raft-wars-unblocked.jpg"
-         alt="Raft Wars Unblocked Online - Free Unblocked Game"
-         title="Click to Play Raft Wars Unblocked 100% Working"
-         fetchpriority="high"
-         width="800"
-         height="450"
-         class="game-cover-image">
+<div class="game-wrapper">
+    <div class="game-container" id="game-holder">
+        <iframe 
+            class="game-iframe" 
+            id="game-area" 
+            src="https://raft-wars.gitlab.io/file/" 
+            scrolling="no" 
+            frameborder="0" 
+            allowfullscreen="">
+        </iframe>
+    </div>
+    <button class="fullscreen-btn" onclick="openFullscreen();">
+        📺 Play Full Screen
+    </button>
 </div>
 
 <div class="seo-article">
     <h2>About Raft Wars Unblocked</h2>
     <p><strong>Raft Wars Unblocked</strong> is the legendary turn-based shooter that brings back all the nostalgic vibes of classic web gaming. Join Simon and his brother as they fend off waves of greedy pirates, vikings, and neighborhood bullies who want to steal their treasure.</p>
-    <p>Whether you are looking for <strong>raft wars unblocked games</strong> to play during a quick school break or want to dive into the full campaign at home, we've got you covered. This game is all about precision, trajectory, and big explosions!</p>
-
-    <h2>Why Raft Wars is a Total Classic</h2>
-    <p>There is a reason why <strong>raft wars unblocked</strong> remains a top choice in 2026. It’s simple to learn but getting that perfect "bullseye" shot takes real practice.</p>
-    <ul>
-        <li><strong>Turn-Based Strategy:</strong> Plan your shots carefully to knock enemies off their rafts.</li>
-        <li><strong>Epic Upgrades:</strong> Spend your gold to beef up your raft and buy powerful grenades.</li>
-        <li><strong>Boss Battles:</strong> Face off against massive enemies that require unique tactics.</li>
-        <li><strong>No Lag Gameplay:</strong> Optimized HTML5 versions ensure smooth performance on any Chromebook.</li>
-    </ul>
 
     <h2>How to Master the Cannon</h2>
     <ol>
@@ -138,36 +162,41 @@
         <li><strong>Win:</strong> Knock every opponent into the water before they sink your raft!</li>
     </ol>
 
-    <h2>The Best Ways to Play: Raft Wars 2 & More</h2>
-    <p>If you've finished the first game, <strong>raft wars 2 unblocked</strong> is the perfect sequel. It features better graphics, more complex levels, and a whole new set of enemies to splash. Sites like <strong>Classroom 6x</strong> and <strong>Unblocked Games 66</strong> often host the full version of Raft Wars securely for students.</p>
-
-    <h2>Frequently Asked Questions (FAQ)</h2>
-    <h3>Can I play Raft Wars Unblocked at school?</h3>
-    <p>Yes! By using sites like Unblocked 76 or searching for raft wars unblocked games on GitHub, you can usually bypass school filters.</p>
-
-    <h3>Is there a difference in Raft Wars 2 Unblocked?</h3>
-    <p><strong>Raft wars 2 unblocked</strong> adds more levels and the ability to customize your weapons even further. It’s a direct continuation of Simon’s adventure!</p>
-
-    <h3>How do I fix lag?</h3>
-    <p>Ensure you are playing an HTML5 version. Most <strong>unblocked games raft wars</strong> sites now use modern tech to ensure a <span class="highlight">No Lag</span> experience.</p>
+    <h2>Why Raft Wars is a Total Classic</h2>
+    <ul>
+        <li><strong>Turn-Based Strategy:</strong> Plan your shots carefully to knock enemies off their rafts.</li>
+        <li><strong>Epic Upgrades:</strong> Spend your gold to beef up your raft and buy powerful grenades.</li>
+        <li><strong>Boss Battles:</strong> Face off against massive enemies that require unique tactics.</li>
+        <li><strong>No Lag Gameplay:</strong> Optimized HTML5 versions ensure smooth performance.</li>
+    </ul>
 </div>
 
 <h2 style="color: var(--primary); margin-bottom: 10px;">Explore More Games</h2>
 <div class="grid">
     <a href="steal-a-brainrot-unblocked.html" class="game-card"><h3>🎮 Steal a Brainrot Unblocked</h3></a>
-    <a href="stickman-hook-unblocked%E2%80%8B.html" class="game-card"><h3>🎮 Stickman Hook Unblocked</h3></a>
+    <a href="stickman-hook-unblocked.html" class="game-card"><h3>🎮 Stickman Hook Unblocked</h3></a>
     <a href="dreadhead-parkour-unblocked.html" class="game-card"><h3>🎮 Dreadhead Parkour Unblocked</h3></a>
     <a href="vex-5-unblocked.html" class="game-card"><h3>🎮 Vex 5 Unblocked</h3></a>
     <a href="skibidi-toilet-unblocked.html" class="game-card"><h3>🎮 Skibidi Toilet Unblocked</h3></a>
 </div>
 
+<script>
+    function openFullscreen() {
+        var elem = document.getElementById("game-area");
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) { /* Safari */
+            elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) { /* IE11 */
+            elem.msRequestFullscreen();
+        }
+    }
+</script>
+
 <footer>
     <p>&copy; 2026 Raft Wars Unblocked. All rights reserved.</p>
     <div class="legal-links">
-        <a href="https://unblocked-steal-a-brainrot.github.io/index.html">Home</a> | 
         <a href="https://unblocked-steal-a-brainrot.github.io/privacy-policy.html">Privacy Policy</a> | 
-        <a href="https://unblocked-steal-a-brainrot.github.io/terms-of-service.html">Terms of Service</a> | 
-        <a href="https://unblocked-steal-a-brainrot.github.io/dmca.html">DMCA</a> | 
         <a href="https://unblocked-steal-a-brainrot.github.io/contact.html">Contact Us</a>
     </div>
 </footer>
